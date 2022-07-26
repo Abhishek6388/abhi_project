@@ -1,242 +1,134 @@
-@import url('hhtp://fonts.googleapis.com/css?family=Poppins:200.300,400,500,600,700,800,900&display=swap');
-*
-
-{
-    margin: 0;
+*{
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
-body
-{
-    background: lightblue;
-    width: 100%;
-    max-width: 1000px;
-    min-height: 1000px;
-    background: #fff;
-    margin: 50px;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    box-shadow: 0 35px 55px rgba(0,0,0,0.1);
-}
-.container .left_Side
-{
-    position: relative;
-    background: #003147;
-    padding: 40px;
-}
-.profileText
-{
-   position: relative;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   padding-bottom: 20px;
-   border-bottom: 1px solid rgba(255,255,255,0.2);
-}
-.profileText .imgBx
-{
-    position: relative;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    overflow: hidden;
-}
-.profileText .imgBx img
-{
-    position: absolute;
-    top: 0;
-    left: 0;
+body{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    color: white;
+    background: black;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
 }
-.profileText h2
-{
-    color: #fff;
-    font-size: 1.5em;
-    margin-top: 20px;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: 600;
-    line-height: 1.4em;
-}
-.profileText h2 span
-{
-    font-size: 0.8em;
-    font-weight: 300;
-}
-.contactInfo
-{
-    padding-top: 40px;
-}
-.title
-{
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-}
-.contactInfo ul
-{
-    position: relative;
-}
-.contactInfo ul li
-{
-    position: relative;
-    list-style: none;
-    margin: 10px 0;
-    cursor: pointer;
-}
-.contactInfo ul li .icon
-{
-    display: inline-block;
-    width: 30px;
-    font-size: 18px;
-    color: #03a9f4;
-}
-.contactInfo ul li span
-{
-    color: #fff;
-    font-weight: 300;
-}
-.contactInfo.education li
-{
-    margin-bottom: 15px;
-}
-.contactInfo.education h5
-{
-    color: #03a9f4;
-    font-weight: 500;
-}
-.contactInfo.education h4:nth-child(2)
-{
-    color: #fff;
-    font-weight: 500;
-}
-.contactInfo.education h4
-{
-    color: #fff;
-    font-weight: 300;
-}
-.contactInfo.language .percent
-{
-    position: relative;
-    width: 100%;
-    height: 6px;
-    background: #f00;
-    display: block;
-    margin-top: 5px;
-}
-.contactInfo.language .percent div
-{
+.container::before{
+    content: "";
+    background: url(images/netflix-bg.jpg) no-repeat center center/cover;
     position: absolute;
-    top: 0;
-    left: 0;
     height: 100%;
-    background: #03a9f4;
+    width: 100%;
+    opacity: 0.3;
+    z-index: -1;
 }
-
-
-.container .right_Side
-{
-     position: relative;
-     background: #fff;
-     padding: 40px;
-}
-.about:last-child
-{
-    margin-bottom: 0;
-}
-.title
-{
-    color: #003147;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-}
-.about .box
-{
+.container .navbar{
+    height: 100px;
     display: flex;
-    flex-direction: row;
-    margin: 20px  0;
 }
-.about .box .year_comapny
-{
-    min-height: 157px;
-}
-.about .box .year_comapny h5
-{
-    text-transform: uppercase;
-    color: #848c90;
-    font-weight: 600;
-}
-.about .box .text h4
-{
-    text-transform: uppercase;
-    color: #2a7da2;
-    font-size: 16px;
-}
-.skills .box
-{
-     position: relative;
-     width: 100px;
-     display: grid;
-     grid-template-columns: 150px 1fr;
-     justify-content: center;
-     align-items: center;
-}
-.skills .box h4
-{
-    text-transform: uppercase;
-    color: #848c90;
-    font-weight: 500;
-
-}
-.skills .box h4 .percent
-{
-    position: relative;
-    width: 100px;
-    height: 10px;
-    background: #f0f0f0;
-}
-.skills .box .percent div
-{
-    position: absolute;
-    top: 0;
-    left: 0;
+.container .navbar .left{
     height: 100%;
-    background: #03a9f4;
+    display: flex;
+    float: left;
 }
-.interest ul
-{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
+.container .navbar .left img{
+    height: 100px;
+    position: absolute;
+    left: 35px;
 }
-.interest ul li
-{
-    list-style: none;
-    color: #333;
-    font-weight: 500;
-    margin: 10px 0;
+.container .navbar .right{
+    display: flex;
+    height: 100px;
+    float: right;
+    position: absolute;
+    right: 50px;
 }
-.interest ul li .fa
-{
-    color: #039a03;
+.container .navbar .right .language{
+    margin: auto;
+    align-items: center;
+    justify-content: center;
     font-size: 18px;
-    width: 20px;
+    padding: 7px 10px;
+    color: white;
+    background: none;
+    cursor: pointer;
+    margin-right: 15px;
 }
-
-@media (max-width: 1000px)
-{
-    .container
-    {
-        margin: 10px;
-        grid-template-columns: repeat(2,1fr);
-
-    }
-    .interest user-select: {
-        grid-template-columns: repeat(2,1fr);
-    }
+.container .navbar .right .language option{
+    background-color: grey;
+}
+.container .navbar .right button{
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 7px 17px;
+    background: #e50914;
+    cursor: pointer;
+    outline: none;
+    border-radius: 4px;
+    border: none;
+}
+.container .navbar .right button a{
+    text-decoration: none;
+    color: white;
+}
+.container .title{
+    padding: 70px 45px;
+}
+.container .title .content{
+    width: 950px;
+    margin: auto;
+    padding: 75px 0;
+    text-align: center;
+}
+.container .title .content h1{
+    width: 650px;
+    margin: auto;
+    font-size: 3.1rem;
+    text-align: center;
+}
+.container .title .content h2{
+    width: 650px;
+    margin: auto;
+    font-size: 1.6rem;
+    text-align: center;
+}
+.container .title .content form h3{
+    font-size: 1rem;
+    margin: 18px 0;
+    text-align: center;
+}
+.container .title .content form .email{
+    width: 1000px;
+    margin: auto;
+}
+.container .title .content form .email input{
+    height: 60px;
+    width: 450px;
+    margin: auto;
+    padding: 20px;
+    font-size: 20px;
+    outline: none;
+}
+.container .title .content form .email button{
+    margin: auto;
+    height: 60px;
+    width: 180px;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    padding: 7px 17px;
+    background: #e50914;
+    cursor: pointer;
+    outline: none;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border: none;
+    margin-left: -5px;
+}
+.container .title .content form .email button:hover{
+    background-color: #f40612;
+}
+.container .title .content form .email button a{
+    text-decoration: none;
+    color: white;
 }
