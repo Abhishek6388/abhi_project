@@ -1,134 +1,171 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-body{
-    width: 100%;
-    height: 100%;
-    color: white;
-    background: black;
-    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+
+
+.main-content {
+    display: grid;
+    min-height: 1000px;
+    width: 90%;
+    margin: 20px auto;
+    grid-template-columns: 300px 700px;
+    
 }
-.container::before{
-    content: "";
-    background: url(images/netflix-bg.jpg) no-repeat center center/cover;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    opacity: 0.3;
-    z-index: -1;
+
+.left-section {
+    grid-column: span 1;
+    background-color: rgba(31, 55, 234, 0.74);
 }
-.container .navbar{
-    height: 100px;
-    display: flex;
+
+.right-section {
+    grid-column: span 1 / span 2;
+    background-color: azure;
 }
-.container .navbar .left{
-    height: 100%;
-    display: flex;
-    float: left;
+
+.left-content {
+    padding: 1rem;
 }
-.container .navbar .left img{
-    height: 100px;
-    position: absolute;
-    left: 35px;
-}
-.container .navbar .right{
-    display: flex;
-    height: 100px;
-    float: right;
-    position: absolute;
-    right: 50px;
-}
-.container .navbar .right .language{
-    margin: auto;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    padding: 7px 10px;
-    color: white;
-    background: none;
-    cursor: pointer;
-    margin-right: 15px;
-}
-.container .navbar .right .language option{
-    background-color: grey;
-}
-.container .navbar .right button{
-    margin: auto;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    font-weight: 400;
-    padding: 7px 17px;
-    background: #e50914;
-    cursor: pointer;
-    outline: none;
-    border-radius: 4px;
-    border: none;
-}
-.container .navbar .right button a{
-    text-decoration: none;
-    color: white;
-}
-.container .title{
-    padding: 70px 45px;
-}
-.container .title .content{
-    width: 950px;
-    margin: auto;
-    padding: 75px 0;
+
+.name {
+    font-size: 1.2rem;
+    font-weight: 700;
     text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.02px;
+    padding: 0.8rem;
+    color: #f7f7f7;
 }
-.container .title .content h1{
-    width: 650px;
-    margin: auto;
-    font-size: 3.1rem;
-    text-align: center;
-}
-.container .title .content h2{
-    width: 650px;
-    margin: auto;
-    font-size: 1.6rem;
-    text-align: center;
-}
-.container .title .content form h3{
+
+.designation {
     font-size: 1rem;
-    margin: 18px 0;
     text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 0.5rem;
+    color: #0316149b;
 }
-.container .title .content form .email{
-    width: 1000px;
-    margin: auto;
+
+.description {
+    font-size: 0.75rem;
+    text-align: center;
+    padding: 1rem;
+    color: #f7f7f7;
 }
-.container .title .content form .email input{
-    height: 60px;
-    width: 450px;
-    margin: auto;
-    padding: 20px;
-    font-size: 20px;
-    outline: none;
+
+.right-main-content {
+    padding: 2rem 3rem;
 }
-.container .title .content form .email button{
+
+.profile-image {
+    display: block;
     margin: auto;
-    height: 60px;
-    width: 180px;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    padding: 7px 17px;
-    background: #e50914;
+    border: 5px solid white;
+    border-radius: 30%;
+    width: 60%;
+}
+
+.social-media {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    margin: 0px 40px;
+}
+
+.social-media li i:hover {
+    color: rgba(128, 103, 103, 0.712);
     cursor: pointer;
-    outline: none;
-    border-top-right-radius: 2px;
-    border-bottom-right-radius: 2px;
-    border: none;
-    margin-left: -5px;
 }
-.container .title .content form .email button:hover{
-    background-color: #f40612;
+
+i {
+    color: #5514e2;
+    margin-right: 4px;
+    padding: 5px;
 }
-.container .title .content form .email button a{
-    text-decoration: none;
-    color: white;
+
+.skills {
+    font-size: 0.75rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1rem 0.5rem;
+
+}
+
+.skill-name {
+    font-size: 0.65rem;
+    text-align: left;
+    color: #5b08f5;
+    padding-bottom: 0.5rem;
+}
+
+.progress-bar {
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: white;
+    height: 4px;
+}
+
+.right-title {
+    font-size: 1.2rem;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    padding: 0.5rem;
+    
+}
+
+.about-section p {
+    padding: 8px;
+}
+
+.education-flex {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px;
+}
+
+.education-flex p {
+    font-size: 14px;
+    color: #0316149b;
+}
+
+.experience-flex {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px;
+}
+
+.experience-flex p {
+    font-size: 14px;
+    color: #0316149b;
+}
+
+.experience-content {
+    padding: 8px;
+    font-weight: 50px;
+}
+
+.project-flex {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px;
+}
+
+.project-content {
+    font-size: 15px;
+    margin-right: 46px;
+}
+
+@media screen and (max-width: 673px) {
+    
+    .main-content {
+        grid-template-columns: repeat(1, 1fr);
+        width: 90%;
+        min-height: 1000px;
+    }
+
+    
 }
